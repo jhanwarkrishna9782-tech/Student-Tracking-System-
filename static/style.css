@@ -1,0 +1,153 @@
+body{
+font-family:Poppins, sans-serif;
+margin:0;
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+color:white;
+
+.bg-animation{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(45deg,#ff512f,#dd2476,#24c6dc,#514a9d);
+background-size:400% 400%;
+animation:gradientMove 12s infinite;
+z-index:-1;
+}
+
+@keyframes gradientMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+}
+
+/* Navbar */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+background:rgba(0,0,0,0.3);
+backdrop-filter:blur(10px);
+}
+
+nav a{
+margin:0 15px;
+color:white;
+font-weight:600;
+text-decoration:none;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#00f7ff;
+}
+
+/* Glassmorphism Form */
+
+.form-box{
+width:420px;
+margin:60px auto;
+padding:40px;
+border-radius:15px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(12px);
+box-shadow:0 10px 40px rgba(0,0,0,0.4);
+}
+
+.form-box h2{
+text-align:center;
+margin-bottom:20px;
+}
+
+input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:8px;
+border:none;
+outline:none;
+}
+
+/* Button */
+
+button{
+width:100%;
+padding:12px;
+background:linear-gradient(45deg,#ff512f,#dd2476);
+border:none;
+border-radius:8px;
+color:white;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+/* Table */
+
+table{
+width:90%;
+margin:40px auto;
+border-collapse:collapse;
+background:white;
+color:black;
+border-radius:10px;
+overflow:hidden;
+}
+
+th{
+background:#0f2027;
+color:white;
+padding:12px;
+}
+
+td{
+padding:10px;
+border-bottom:1px solid #ddd;
+}
+
+tr:hover{
+background:#f2f2f2;
+}
+
+/* Delete Button */
+
+.delete{
+background:red;
+color:white;
+padding:6px 12px;
+border-radius:6px;
+text-decoration:none;
+}
+
+/* Search */
+
+.search-box{
+text-align:center;
+margin-top:20px;
+}
+
+.search-box input{
+width:250px;
+}
+.welcome{
+text-align:center;
+padding:40px;
+}
+
+.welcome h2{
+font-size:32px;
+margin-bottom:10px;
+}
+
+.welcome p{
+font-size:18px;
+opacity:0.9;
+}

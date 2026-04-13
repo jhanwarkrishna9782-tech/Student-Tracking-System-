@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Students</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Student Database</h1>
+<nav>
+<a href="/">Add Student</a>
+<a href="/about">About</a>
+</nav>
+</header>
+
+<div class="search-box">
+
+<form method="GET" action="/students">
+
+<input type="text" name="skill" placeholder="Search Skill (Python, AI)">
+<button type="submit">Search</button>
+
+</form>
+
+</div>
+
+<table>
+
+<tr>
+<th>Name</th>
+<th>Branch</th>
+<th>Skills</th>
+<th>Email</th>
+<th>Phone</th>
+<th>College</th>
+<th>Year</th>
+<th>Resume</th>
+<th>Action</th>
+</tr>
+
+{% for s in students %}
+
+<tr>
+
+<td>{{s[1]}}</td>
+<td>{{s[2]}}</td>
+<td>{{s[3]}}</td>
+<td>{{s[4]}}</td>
+<td>{{s[5]}}</td>
+<td>{{s[6]}}</td>
+<td>{{s[7]}}</td>
+
+<td>
+<a href="/uploads/{{s[8]}}" target="_blank">View</a>
+</td>
+
+<td>
+<a href="/delete/{{s[0]}}" class="delete">Delete</a>
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>

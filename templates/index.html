@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Tracker Pro</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <header>
+<h1>Student Tracker System</h1>
+
+<nav>
+<a href="/">Home</a>
+<a href="/students">Students</a>
+<a href="/about">About</a>
+</nav>
+
+</header>
+
+
+<div class="welcome">
+
+<h2>Welcome to Student Tracker System</h2>
+
+<p>
+Manage student data easily including skills, resume, email,
+phone number and academic details.
+</p>
+
+<p>
+Use this system to track students and search them by skills.
+</p>
+
+</div>
+
+<header>
+<h1>Student Tracker System</h1>
+<nav>
+<a href="/">Add Student</a>
+<a href="/students">Students</a>
+<a href="/about">About</a>
+</nav>
+</header>
+
+
+
+
+<div class="form-box">
+
+<h2>Add Student</h2>
+
+<form action="/add" method="POST" enctype="multipart/form-data">
+
+<input type="text" name="name" placeholder="Student Name" required>
+
+<input type="text" name="branch" placeholder="Branch" required>
+
+<input type="text" name="skills" placeholder="Skills (Python, AI etc)" required>
+
+<input type="email" name="email" placeholder="Email ID" required>
+
+<input type="tel" name="phone" pattern="[0-9]{10}" placeholder="Phone (10 digits)" required>
+
+<input type="text" name="college" placeholder="College Name" required>
+
+<input type="text" name="year" placeholder="Year (1st / 2nd / 3rd)" required>
+
+<input type="file" name="resume" required>
+
+
+<script>
+const phoneInput = document.querySelector('input[name="phone"]');
+
+phoneInput.addEventListener("input", function () {
+    this.value = this.value.replace(/[^0-9]/g, '').slice(0,10);
+});
+</script>
+
+
+<button type="submit">Add Student</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
